@@ -157658,13 +157658,11 @@ var printf_ans = read_mem_as_string(printf_buf, printf_buf_end-printf_buf);
 var _ = malloc_nogc.pop();
 var _ = malloc_nogc.pop();
 var _ = malloc_nogc.pop();
-if(main_ret == 1){
-	document.getElementById("progress").innerHTML="PS4 Jailbreak Failed. Know Error Code To Handle, Re-Trying Jailbreak !!";}
-else if(main_ret == 179 || main_ret == 0){
+if(main_ret == 179 || main_ret == 0){
     document.getElementById("progress").innerHTML="PS4 Jailbreak 7.5X Jailbreak Complete !!";
     localStorage.passcount = ++localStorage.passcount;window.passCounter.innerHTML=localStorage.passcount;}
-else if(main_ret == 2 || main_ret != 179 || main_ret != 0 || main_ret != 1){
+else if(main_ret != 1){
     localStorage.failcount = ++localStorage.failcount;window.failCounter.innerHTML=localStorage.failcount;
     document.getElementById("progress").innerHTML="PS4 Jailbreak 7.5X Jailbreak Failed, Please Restart Your Console and Start Again!!!";
-	alert("PS4 Jailbreak Failed. Fatal Error Code Returned!! Please Restart Your Console and Start Again!!!");}
+	alert("PS4 Jailbreak Failed. !! Please Restart Your Console and Start Again!!!");}
     
